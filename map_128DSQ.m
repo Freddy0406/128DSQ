@@ -61,7 +61,7 @@ function [bit] = llrb(x)
     variance = 1;  
     sum1 = 0.0;
     sum2 = 0.0;
-    for k = 0:7
+    for k = 0:31
         sum1 = sum1+exp(-(x-(4*k+0))^2/(2*variance))+exp(-(x-(4*k+1))^2/(2*variance));
         sum2 = sum2+exp(-(x-(4*k+2))^2/(2*variance))+exp(-(x-(4*k+3))^2/(2*variance));
     end
